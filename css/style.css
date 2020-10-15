@@ -29,3 +29,20 @@ main{
   grid-template-columns: repeat(4, 15em);
   grid-gap: 1em;
 }
+
+/* MEDIA */
+@media(max-width: 1000px){
+  main{
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 10em);
+  }
+  .photo-div{
+    height: 10em;
+    width: 10em;
+  }
+  .photos{
+    height: 10em;
+    width: 10em;
+  }
+}

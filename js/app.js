@@ -6,11 +6,6 @@ window.addEventListener('load', function() {
 });
 
 /*
-  search photos
-*/
-const search = new Filter('search', 'data-caption');
-
-/*
   Gallery info array
 */
 photos = [
@@ -73,7 +68,7 @@ photos = [
     index: "12.jpg",
     title: "Bluebells",
     caption: "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.",
-  }
+  },
 ];
 
 /*
@@ -82,10 +77,22 @@ photos = [
 
 main = document.querySelector('main');
 html = '';
-for(var i = 0; i < photos.length + 1; i++){
+for(var i = 0; i < photos.length; i++){
   main.innerHTML = html;
   html += `<div class="photo-div">
-  ${`<a href="photos/${photos[i].index}" data-caption=${photos[i].caption}>`}
-  ${`<img class="photos" src="photos/${photos[i].index}" alt=${photos[i].title}/>`}</a>
+  ${`<a href="photos/${photos[i].index}" data-caption="${photos[i].caption}">`}
+  ${`<img class="photos" src="photos/${photos[i].index}" alt="${photos[i].title}"/>`}</a>
   </div>`;
+  console.log(photos[i].index);
 }
+main.innerHTML = html;
+html += `<div class="photo-div">
+${`<a href="photos/${photos[photos.length - 1]}" data-caption="${photos[photos.length - 1].caption}">`}
+${`<img class="photos" src="photos/${photos[photos.length - 1].index}" alt="${photos[photos.length - 1].title}"/>`}</a>
+</div>`;
+
+
+/*
+  search photos
+*/
+const search = new Filter('search', 'data-caption');
