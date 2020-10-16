@@ -91,7 +91,6 @@ ${`<a href="photos/${photos[photos.length - 1]}" data-caption="${photos[photos.l
 ${`<img class="photos" src="photos/${photos[photos.length - 1].index}" alt="${photos[photos.length - 1].title}"/>`}</a>
 </div>`;
 
-
 /*
   search photos
 */
